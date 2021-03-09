@@ -12,15 +12,17 @@
     <title>Coffee Wild</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="app.js" defer></script>
+    <script src="js/app.js" defer></script>
   </head>
   <body>
     <header>
       <div class="title">
         <h1>Combien de cafés buvez-vous par jour ?</h1>
-        <input type="number" placeholder="5">
-        <input type="submit">
-        <!-- Mettre une image de mort si il dépasse 100 cafés par jours -->
+        <form id="formCoffee">
+          <input id="inputCoffee" type="number" placeholder="ex: 5">
+          <input type="submit" id="submit">
+          <!-- Mettre une image de mort si il dépasse 100 cafés par jours -->
+        </form>
       </div>
       <div class="darkMode">
         <span>Dark Mode</span>

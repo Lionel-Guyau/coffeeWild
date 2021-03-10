@@ -29,12 +29,16 @@
   --DarkGrayishBlueText: hsl(228, 12%, 44%);
   --VeryDarkBlueText: hsl(230, 17%, 14%);
 }
-
-
 body {
+  background-color: var(--WhiteBG);
   font-size: clamp(14px, 1vw, 18px);
   font-family: "Inter", sans-serif;
   line-height: 150%;
+}
+
+/* DARK MODE */
+body.darkMode {
+  background-color: black;
 }
 
 /* The switch - the box around the slider */
@@ -45,15 +49,9 @@ body {
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
 /* The slider */
 .slider {
+  border-radius: 34px;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -64,12 +62,16 @@ body {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
+.slider.darkMode {
+  background-color: green;
+  box-shadow: 0 0 1px green;
+}
 .slider:before {
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
+  border-radius: 50%;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -77,25 +79,8 @@ body {
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
+.slider.darkMode:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }

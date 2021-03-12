@@ -2,7 +2,6 @@ const App = function () {
   "use strict";
 
   /* Click Dark Mode */
-<<<<<<< HEAD
   let label = document.querySelector(".switch");
   let slider = document.querySelector(".slider");
   
@@ -21,21 +20,11 @@ const App = function () {
   submitButton.disabled = true;
   inputCoffee.onkeyup = () => {
     if (inputCoffee.value.length && inputAge.value.length > 0) {
-=======
-  const inputCoffee = document.getElementById("inputCoffee");
-  const submitButton = document.getElementById("submit");
-  const formCoffee = document.getElementById("formCoffee");
-
-  submitButton.disabled = true;
-  inputCoffee.onkeyup = () => {
-    if (inputCoffee.value.length > 0) {
->>>>>>> 84b9fc23c6051b4ce6485e9a15cf0f95d90abcea
       submitButton.disabled = false;
     } else {
       submitButton.disabled = true;
     }
   };
-<<<<<<< HEAD
 /*
   formCoffee.onsubmit = function(e) {
     e.preventDefault();
@@ -53,7 +42,3 @@ const App = function () {
   }*/
 };
 App();
-=======
-};
-App()
->>>>>>> 84b9fc23c6051b4ce6485e9a15cf0f95d90abcea

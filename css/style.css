@@ -91,3 +91,53 @@ body.darkMode {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+/*===========Test Card=============*/
+
+.smallCard{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--LightGrayishBlueCardBG);
+  border-radius: 0 0 5px 5px;
+  min-height: 60px;
+  overflow: hidden;
+
+  margin: 1rem 1rem 2rem 1rem;
+  padding: 1rem;
+}
+/* .smallCard::before{
+  content: "";
+  background-color: var(--BrightRed);
+  position: absolute;
+  top: 0;
+  height: 2px;
+  width: 100%;
+} */
+.sideCardInfo{
+  display: flex;
+  flex-direction:column;
+  height: 100%;
+  justify-content: space-between;
+}
+@media all and (min-width: 500px){
+  .secondary-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+@media all and (min-width: 700px){
+  .secondary-cards{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width:780px){
+  .secondary-cards{
+    display: grid;
+    grid-template-columns:repeat(4, 25%);
+    grid-gap: 1rem;
+  }
+}

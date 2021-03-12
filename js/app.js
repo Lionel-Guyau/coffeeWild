@@ -2,6 +2,7 @@ const App = function () {
   "use strict";
 
   /* Click Dark Mode */
+
   const label = document.querySelector(".switch");
   const slider = document.querySelector(".slider");
   const submitButton = document.getElementById("submit");

@@ -112,6 +112,7 @@ form #submit:hover {
   font-weight: 700;
   margin-right: 0.5rem;
 }
+
 .switch {
   position: relative;
   display: inline-block;
@@ -132,6 +133,7 @@ form #submit:hover {
 .slider.darkMode {
   background-color: var(--ToggleDarkTheme);
 }
+
 .slider:before {
   position: absolute;
   content: "";
@@ -282,6 +284,7 @@ footer span {
   margin: 0 0.2rem;
   font-weight: 700;
 }
+
 
 /* MEDIA QUERY MOBILE + */
 @media all and (min-width: 500px) {

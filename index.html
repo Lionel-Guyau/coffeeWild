@@ -12,86 +12,126 @@
     <title>Coffee Wild</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/8bfa0b13ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/vanilla-tilt.min.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
     <header>
-      <div class="title">
-        <h1>Combien de cafés buvez-vous par jour ?</h1>
-        <form id="formCoffee">
-          <input id="inputCoffee" type="number" placeholder="How many coffee...">
-          <input id="inputAge" type="number" placeholder="Your age...">
-          <input type="submit" id="submit">
-          <!-- Mettre une image de mort si il dépasse 100 cafés par jours -->
-        </form>
-      </div>
-      <div class="darkMode">
-        <span>Dark Mode</span>
-        <label class="switch">
-          <span class="slider"></span>
-        </label>
+      <div class="wrapper-header">
+        <div class="title">
+          <h1>CALCULATEUR DE CAFES DES WILDERS !</h1>
+          <form id="formCoffee">
+            <label for="inputCoffee"
+              >Combien de café(s) buvez-vous par jour ?</label
+            >
+            <input
+              id="inputCoffee"
+              type="number"
+              placeholder="Combien de cafés..."
+            />
+            <label for="inputAge">Entrez votre âge</label>
+            <input id="inputAge" type="number" placeholder="Ton age..." />
+            <input type="submit" id="submit" value="Calculer !" />
+          </form>
+        </div>
+        <div class="darkModeButton">
+          <span>Dark Mode</span>
+          <label class="switch">
+            <span class="slider"></span>
+          </label>
+        </div>
       </div>
     </header>
+    <div id="coffeeImg">
+      <img src="images/coffee.gif" alt="Coffee gif" />
+      <p>Tu bois trop de cafés !!</p>
+      <button id="triggerAnimation">Multiplie le tout par x1000</button>
+    </div>
+    <h2>Vos informations</h2>
     <section class="main-cards">
-      <div class="bigCard">
-        <h3>1987</h3>
-        <p>Cafés</p>
+      <div class="bigCard tiltEffect">
+        <h3>Cafés depuis la naissance</h3>
+        <span id="coffeeSinceBorn"></span>
       </div>
-      <div class="bigCard">
-        <h3>1044</h3>
-        <p>Taux de caféine</p>
+      <div class="bigCard tiltEffect">
+        <h3>Taux de caféine par jour</h3>
+        <span id="cafeinLevel"></span>
       </div>
-      <div class="bigCard">
-        <h3>1958</h3>
-        <p>Cafés à l'heure</p>
+      <div class="bigCard tiltEffect">
+        <h3>Cafés restants avant de mourir</h3>
+        <span id="timeLeftToLive"></span>
       </div>
-      <div class="bigCard">
-        <h3>2021</h3>
-        <p>Filtre</p>
+      <div class="bigCard tiltEffect">
+        <h3>Total de cafés dans une vie</h3>
+        <span id="totalCoffeeInLife"></span>
       </div>
     </section>
-    <h2>Information complémentaire sur le café</h2>
+    <h2>Informations complémentaires</h2>
     <section class="secondary-cards">
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Cafés à l'heure</h3>
+        <div class="information">
+          <span id="coffeeByHour"></span>
+          <img src="images/coffee1.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Filtres utilisés</h3>
+        <div class="information">
+          <span id="coffeeFilter"></span>
+          <img src="images/coffee2.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Nombre de brûlures</h3>
+        <div class="information">
+          <span id="burn"></span>
+          <img src="images/coffee3.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Nombre de fois oû ça coule à côté</h3>
+        <div class="information">
+          <span id="coffeeSink"></span>
+          <img src="images/coffee4.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Nombre de cafés renversés</h3>
+        <div class="information">
+          <span id="upSideDown"></span>
+          <img src="images/coffee5.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Nombre de cafés payés</h3>
+        <div class="information">
+          <span id="paidToSomeone"></span>
+          <img src="images/coffee6.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Nombre de cafés payés par quelqu'un</h3>
+        <div class="information">
+          <span id="paidBySomeone"></span>
+          <img src="images/coffee7.svg" alt="Image Coffee" />
+        </div>
       </div>
-      <div class="smallCard">
-        <h4>Titre card info</h4>
-        <span>87</span>
-        <img src="images/icon-facebook.svg" alt="">
+      <div class="smallCard tiltEffect">
+        <h3>Qu'est-ce qui énerve encore plus que le café ?</h3>
+        <div class="information">
+          <span id="missingCoffee"></span>
+          <img src="images/coffee8.svg" alt="Image Coffee" />
+        </div>
       </div>
     </section>
+    <footer>
+      Made by <span>Sebastien,</span><span>Lionel</span> and <span>David</span>
+      <img src="images/WCS-logo.png" alt="Logo Wild Code School" />
+    </footer>
   </body>
 </html>
